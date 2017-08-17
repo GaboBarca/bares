@@ -1,54 +1,6 @@
 <% content_for :features, "landing-page" %>
 <% content_for :class, "landing-page" %>
-<nav class="navbar navbar-transparent navbar-absolute" style="background-color: rgba(0, 0, 0, 0.4);">
-	<div class="container">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			</button>
 
-			
-			<!--Icono de la barra de navegacion-->
-			<a href="#">
-	        	<div class="logo-container">
-	                <div class="logo">
-	                    <%= image_tag("")  %>
-	                </div>
-	                <div class="brand" style="font-size: large;">
-	                    .BAR
-	                </div>
-
-
-				</div>
-	      	</a>
-	      	<!--zzzzzzzzzzzzzz-->
-		</div>
-		<div class="collapse navbar-collapse" id="navigation-example">
-			<ul class="nav navbar-nav navbar-right">
-				
-				<li>
-					<a href="https://twitter.com/CreativeTim" target="_blank" class="btn btn-simple">
-						<i class="fa fa-twitter"></i>
-					</a>
-				</li>
-				<li>
-					<a href="https://www.facebook.com/CreativeTim" target="_blank" class="btn btn-simple">
-						<i class="fa fa-facebook-square"></i>
-					</a>
-				</li>
-				<li>
-					<a href="https://www.instagram.com/CreativeTimOfficial" target="_blank" class="btn btn-simple">
-						<i class="fa fa-instagram"></i>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</nav>
 <div class="wrapper">
 	<!--header-filter-->
 	<div class="header " style="background-image: url(<%= asset_path 'BARW.png' %>); ">
@@ -69,9 +21,7 @@
 					<div class="col-md-6 align-items-end" style="text-align: right; "">
 					<br>
 					<br>
-						<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-danger btn-raised btn-lg">
-							<i class="fa fa-diamond" style="font-size:16px;"></i> Registrarse
-						</a>
+					<%= link_to(raw(("<i class='fa fa-diamond' style='font-size:16px;'></i>") + (' Registrarse')), new_user_registration_path, class:"btn btn-danger btn-raised btn-lg" )  %>  
 					</div>
 					
 				</div>
@@ -79,7 +29,7 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<h1 class="title" style="color: currentColor;">.BAR</h1>
-						<h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here. Add a button if you want the user to see more.</h5>
+						<h5 class="description">Dolores Hidalgo Cuna de la Independencia Nacional, es uno de los 46 municipios del estado mexicano de Guanajuato. Se ubica en la región norte-centro de su territorio y tiene una extensión de 1656,18 km². De acuerdo con el censo del año 2010, la población asciende a 148.173 a nivel municipal y a 59.240 en la cabecera municipal.</h5>
 					</div>
 				</div>
 				<div class="features">
@@ -87,38 +37,38 @@
 						<div class="col-md-4">
 							<div class="feature feature-primary">
 								<i class="material-icons">chat</i>
-								<h4 class="title">First Feature</h4>
-								<p class="description">Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+								<h4 class="title">Fácil</h4>
+								<p class="description">Esté Sitio es facíl de navergar, ademas  cuenta con información sobre Bares de mayor popularidad en Dolores Hidalgo</p>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="feature feature-success">
 								<i class="material-icons">verified_user</i>
-								<h4 class="title">Second Feature</h4>
-								<p class="description">Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+								<h4 class="title">Seguro</h4>
+								<p class="description">Es sitio brinda seguridad y confidencialidad de tus datos</p>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="feature feature-danger">
 								<i class="material-icons">fingerprint</i>
-								<h4 class="title">Third Feature</h4>
-								<p class="description">Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+								<h4 class="title">Redes Sociales</h4>
+								<p class="description">Aquí podras autentificarte con las diferentes redes sociales que ya conoces!!</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="section text-center">
-				<h2 class="title">Here is our team</h2>
+				<h2 class="title">Nuestro Equipo</h2>
 				<div class="team">
 					<div class="row">
 						<div class="col-md-4">
 							<div class="team-player">
-								<%= image_tag("material_kit/avatar.jpg", alt: "Thumbnail Image", class: "img-raised img-circle") %>
-								<h4 class="title">Gigi Hadid <br />
-								<small class="text-muted">Model</small>
+								<%= image_tag("erika", alt: "Thumbnail Image", class: "img-raised img-circle") %>
+								<h4 class="title">Erika Cabrera <br />
+								<small class="text-muted">Líder/Documentadora</small>
 								</h4>
-								<p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
+								<p class="description"><a href="#">links</a> para que las personas puedan seguirlos fuera del sitio.</p>
 								<a href="#pablo" class="btn btn-just-icon"><i class="fa fa-twitter"></i></a>
 								<a href="#pablo" class="btn btn-just-icon"><i class="fa fa-instagram"></i></a>
 								<a href="#pablo" class="btn btn-just-icon btn-default"><i class="fa fa-facebook-square"></i></a>
@@ -126,22 +76,22 @@
 						</div>
 						<div class="col-md-4">
 							<div class="team-player">
-								<%= image_tag("material_kit/christian.jpg", alt: "Thumbnail Image", class: "img-raised img-circle") %>
-								<h4 class="title">Christian Louboutin<br />
-								<small class="text-muted">Designer</small>
+								<%= image_tag("Daniel", alt: "Thumbnail Image", class: "img-raised img-circle") %>
+								<h4 class="title">Daniel Guzmán<br />
+								<small class="text-muted">Dieseñador/Desarrollador</small>
 								</h4>
-								<p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
+								<p class="description"><a href="#">links</a>para que las personas puedan seguirlos fuera del sitio.</p>
 								<a href="#pablo" class="btn btn-just-icon"><i class="fa fa-twitter"></i></a>
 								<a href="#pablo" class="btn btn-just-icon"><i class="fa fa-linkedin"></i></a>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="team-player">
-								<%= image_tag("material_kit/kendall.jpg", alt: "Thumbnail Image", class: "img-raised img-circle") %>
-								<h4 class="title">Kendall Jenner<br />
-								<small class="text-muted">Model</small>
+								<%= image_tag("Gabo", alt: "Thumbnail Image", class: "img-raised img-circle") %>
+								<h4 class="title">Gabriel Carrillo<br />
+								<small class="text-muted">Desarrollador</small>
 								</h4>
-								<p>You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
+								<p><a href="#">links</a> para que las personas puedan seguirlos fuera del sitio.</p>
 								<a href="#pablo" class="btn btn-just-icon"><i class="fa fa-google-plus"></i></a>
 								<a href="#pablo" class="btn btn-just-icon"><i class="fa fa-youtube-play"></i></a>
 								<a href="#pablo" class="btn btn-just-icon btn-default"><i class="fa fa-twitter"></i></a>
@@ -153,31 +103,31 @@
 			<div class="col-md-12">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
-						<h2 class="text-center title">Work with us</h2>
-						<h4 class="text-center description">Divide details about your product or agency work into parts. Write a few lines about each one and contact us about any further collaboration. We will responde get back to you in a couple of hours.</h4>
+						<h2 class="text-center title">Trabaja con nosotros</h2>
+						<h4 class="text-center description">Envíanos un mensaje, te responderemos enseguida</h4>
 						<form class="contact-form">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group label-floating">
-										<label class="control-label">Your Name</label>
+										<label class="control-label">Tu Nombre</label>
 										<input type="email" class="form-control">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group label-floating">
-										<label class="control-label">Your Email</label>
+										<label class="control-label">Tu Email</label>
 										<input type="email" class="form-control">
 									</div>
 								</div>
 							</div>
 							<div class="form-group label-floating">
-								<label class="control-label">Your Messge</label>
+								<label class="control-label">Tu Mensaje</label>
 								<textarea class="form-control" rows="4"></textarea>
 							</div>
 							<div class="row">
 								<div class="col-md-4 col-md-offset-4 text-center">
 									<button class="btn btn-primary btn-raised">
-									Send Message
+									Enviar	
 									</button>
 								</div>
 							</div>
@@ -214,8 +164,8 @@
 				</ul>
 			</nav>
 			<div class="copyright pull-right">
-				&copy; 2016, made with <i class="fa fa-heart heart"></i> by Creative Tim
+				&copy; 2017, made with <i class="fa fa-heart heart"></i> by Beernini
 			</div>
 		</div>
 	</footer>
-</div>		
+</div>

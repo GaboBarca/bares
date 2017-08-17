@@ -1,0 +1,101 @@
+<% content_for :features, "signup-page" %>
+<% content_for :class, "signup-page" %>
+<div class="wrapper">
+  <div class="header header-filter" style="background-image: url(<%= asset_path 'BARW.png' %>); background-size: cover; background-position: top center;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+          <div class="card card-signup">
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <!--Mensajes de formulario-->
+            <%= devise_error_messages! %>
+            <div class="header header-primary text-center">
+              <h2><b>Registro</b></h2>
+              <div class="social-line">
+                <!--En la linea siguiente redenderizo los links de autenticacion-->
+                <%= render "devise/shared/social_links", class: "btn btn-primary btn-wd btn-lg" %>
+              </div>
+            </div>
+            <p class="text-divider" style="text-align: center;">Verifica tu identidad con tus redes sociales
+            </br>
+            
+            <i class="fa fa-cubes" style="font-size: xx-large;"></i>
+            
+
+            </p>
+            
+            <div class="content" style="padding: 0px 10px 0px 10px;">
+              
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="material-icons">email</i>
+                </span>
+                <%= f.email_field :email, autofocus: true, class:"form-control", placeholder:"Email..." %>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="material-icons">lock_outline</i>
+                </span>
+                
+                <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"Contraseña..."  %>
+                <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="material-icons">lock_outline</i>
+                </span>
+                <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control", placeholder:"Confirmar contraseña..."   %>
+              </div>
+              
+            </div>
+            
+            <p style="text-align: center;margin: 10px 10px 10px;">
+              Para asegurar que eres tu en todo momento utiliza tus medios sociales, para futuras configuraciones sobre tu usuario utiliza las opciones de tu red social seleccionada.
+            </p>
+            <div class="footer text-center actions">
+              
+              <%= f.submit "Registrarse", class: "btn btn-primary btn-wd btn-lg" %>
+              <!--
+              <%= render "devise/shared/links", class: "btn btn-primary btn-wd btn-lg" %>
+              -->
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <nav class="pull-left">
+          <ul>
+            <li>
+              <a href="http://www.creative-tim.com">
+                Creative Tim
+              </a>
+            </li>
+            <li>
+              <a href="http://presentation.creative-tim.com">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="http://blog.creative-tim.com">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="http://www.creative-tim.com/license">
+                Licenses
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="copyright pull-right">
+          &copy; 2017, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com" target="_blank">Beernini</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

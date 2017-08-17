@@ -3,25 +3,90 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="<%= asset_path 'bar.ico' %>">
     <%= csrf_meta_tags %>
-
-    <title>Material Kit by Creative Tim</title>
-
+    <title>.BAR</title>
     
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-
     
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag '//fonts.googleapis.com/icon?family=Material+Icons' %>
     <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Roboto:300,400,500,700' %>
     <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' %>
-
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
     <%= yield :head %>
   </head>
   <body class="<%= yield :class %>" data-features="<%= yield :features %>">
-    <%= yield %>
-  </body>
+    <% if notice %>
+    <p class="notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+    <p class="notice"><%= alert %></p>
+    <% end %>
+    <!-----------------BARRA DE NAVEGACION DE TODO EL SITIO-->
+    <nav class="navbar navbar-transparent navbar-absolute" style="background-color: rgba(0, 0, 0, 0.4);">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          
+          <!--Icono de la barra de navegacion-->
+          
+          <%= link_to home_index_path do %>
+          <div class='logo-container'>
+            <div class='logo'>
+              <%= image_tag('bar.ico') %>
+            </div>
+            <div class='brand' style='font-size: large;'>
+              .BAR
+            </div>
+          </div>
+          <% end %>
+          
+          <!--zzzzzzzzzzzzzz-->
+        </div>
+        <% if user_signed_in? %>
+        <div class="collapse navbar-collapse" id="navigation-example">
+          <ul class="nav navbar-nav navbar-right">
+            
+            <li>
+              <%= link_to( raw(("<i class='material-icons' >explore</i>  ") + (' Bares')), home_lugares_path, class:"btn btn-simple", target:"_blank") %>
+            </li>
+            <li>
+              <%= link_to( raw(("<i class='fa fa-cart-plus' ></i> ") + (' Tienda')), home_tienda_path, class:"btn btn-simple", target:"_blank") %>
+              
+            </a>
+          </li>
+          <!--
+          <li>
+            <a href="https://www.instagram.com/CreativeTimOfficial" target="_blank" class="btn btn-simple">
+              
+              <i class="fa fa-map-signs"></i> Salir
+            </a>
+          </li>
+          -->
+        </ul>
+      </div>
+      <% else %>
+      <div class="collapse navbar-collapse" id="navigation-example">
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to(raw(("<i class='fa fa-diamond' style='font-size:16px;'></i>") + (' Registrarse')), new_user_registration_path, class:"btn btn-danger btn-raised btn-lg" )  %>
+          </li>
+        </ul>
+      </div>
+      <% end %>
+      
+      
+    </div>
+  </nav>
+  <!------------------YIELD---------------------------->
+  <%= yield %>
+</body>
 </html>

@@ -1,0 +1,14 @@
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+  	<!--Facebook-->
+    <%= link_to(raw("<i class= 'fa fa-facebook-square' style='font-size: xx-large;'></i>"), omniauth_authorize_path(resource_name, provider), class:"btn btn-just-icon" ) %>
+    <!--Twitter-->
+    <a href="#" class="btn btn-just-icon">
+       <i class="fa fa-twitter"></i>
+     </a>
+    <!--Google+-->
+    <a href="#" class="btn btn-just-icon">
+      <i class="fa fa-google-plus"></i>
+    </a>
+  <% end -%>
+<% end -%>

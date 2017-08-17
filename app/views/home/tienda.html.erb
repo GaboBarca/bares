@@ -1,0 +1,124 @@
+<% content_for :features, "landing-page" %>
+<% content_for :class, "landing-page" %>
+<% if user_signed_in? %>
+<div class="wrapper">
+  <div class="header " style="background-image: url(<%= asset_path 'BARW.png' %>); background-size: cover; background-position: top center;">
+  </div>
+</div>
+<div class="main main-raised">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-12" style="background-color: darkslategrey;">
+        <br><br>
+      </div>
+    </div>
+    <div class="features">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="feature feature-primary">
+            <i class="fa fa-leaf" style="font-size:70px"></i>
+            <h4 class="title">Done el monto que prefiera para la continuacion del sitio</h4>
+            <!--Boton Donar-->
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="HHPQKJ74SWTHL">
+              <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+              <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature feature-success">
+            <i class="material-icons" style="font-size:70px">card_membership</i>
+            <h4 class="title">Comprar Membresía</h4>
+            <p class="description">Nuestra membrecia le ofrece promociones en negocios afiliados</p>
+            <!--Boton comprar ahora-->
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="PPS3D2M4UM84A">
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+              <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature feature-danger text-center">
+            <i class="material-icons" style="font-size:70px">add_shopping_cart</i>
+            <h4 class="title">Productos</h4>
+            <p class="description">Compre nuestros productos oficiales</p>
+            <!--Boton añadir al carrito-->
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="ZPFXCTSCJ5QFW">
+              <div class="col-md-3"></div>
+              <div class="col-md-6">
+              <table>
+                <tr><td><input type="hidden" name="on0" value="Nombre del menú desplegable">Productos: </td></tr><tr><td><select name="os0">
+                <option value="Opción 1">Opción 1 $0.01 MXN</option>
+                <option value="Opción 2">Opción 2 $0.02 MXN</option>
+                <option value="Opción 3">Opción 3 $0.03 MXN</option>
+              </select> </td></tr>
+            </table>
+            </div>
+            <div class="col-md-3"></div>
+            <input type="hidden" name="currency_code" value="MXN">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+            <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+  </div>
+  
+  
+  <footer class="footer">
+    <div class="container">
+      <nav class="pull-left">
+        <ul>
+          <li>
+            <a href="http://www.creative-tim.com">
+              Creative Tim
+            </a>
+          </li>
+          <li>
+            <a href="http://presentation.creative-tim.com">
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="http://blog.creative-tim.com">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a href="http://www.creative-tim.com/license">
+              Licenses
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="copyright pull-right">
+        &copy; 2017, made with <i class="fa fa-heart heart"></i> by Beernini
+      </div>
+    </div>
+  </footer>
+</div>
+
+<% else %>
+  <div class="header " style="background-image: url(<%= asset_path 'BARW.png' %>); background-size: cover; background-position: top center;">
+  </div>
+</div>
+<div class="main main-raised">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-12" style="background-color: darkslategrey;">
+        <br><br>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <h3>Por favor, regístrate para ver esta sección</h3>
+    </div>
+<% end %>

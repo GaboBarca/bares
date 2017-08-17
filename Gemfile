@@ -52,3 +52,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'material_kit', '~> 1.0', '>= 1.0.0.2'
+
+gem 'devise', github: "plataformatec/devise"
+gem "omniauth"
+gem "omniauth-facebook"
+gem "omniauth-twitter"
+
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
