@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   get 'home/lugares' => 'home#lugares'
   get 'home/tienda' => 'home#tienda'
+  #get 'home/index' => 'home#index'
   devise_for :users, controllers:{
   	omniauth_callbacks: "users/omniauth_callbacks"
 
   }
-	#root 'home#index'
+	root 'home#index'
 	get 'home/index' => 'home#index'
   	get 'home/registro' => 'home#registro'
   	
