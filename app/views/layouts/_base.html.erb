@@ -16,7 +16,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= yield :head %>
   </head>
-  <body class="<%= yield :class %>" data-features="<%= yield :features %>">
+  <body class="<%= yield :class %>" data-features="<%= yield :features %>" style="margin: 0;">
     <% if notice %>
     <p class="notice"><%= notice %></p>
     <% end %>
